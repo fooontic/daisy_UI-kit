@@ -1,0 +1,9 @@
+script.
+
+	var dropdownLang = document.querySelector('.dropdown--lang');
+
+	function showDropdown(){
+		dropdownLang.classList.toggle('active')
+	}
+
+	dropdownLang.addEventListener('hover', showDropdown())
