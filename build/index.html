@@ -17,7 +17,17 @@
           <ul class="supheader__list pull-right">
             <li class="supheader__item supheader__item--geo">Россия, Санкт-Петербург</li>
             <li class="supheader__item supheader__item--curr">Рубли</li>
-            <li class="supheader__item supheader__item--lang">RU</li>
+            <li class="supheader__item supheader__item--lang">RU
+              <div class="dropdown dropdown--lang"><span class="dropdown__title">Язык</span>
+                <ul class="dropdown__list">
+                  <li class="dropdown__list-item"><span>EN</span>English</li>
+                  <li class="dropdown__list-item"><span>LV</span>Lietuvių</li>
+                  <li class="dropdown__list-item"><span>LT</span>Latviski</li>
+                  <li class="dropdown__list-item"><span>PL</span>Polski</li>
+                  <li class="dropdown__list-item"><span>RU</span>Русский</li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -41,4 +51,17 @@
       </div>
     </div>
   </header>
+  <script src="js/main.min.js"></script>
+  <script>
+    var el = $('supheader__item');
+    $(el).hover(function()
+    {
+      $(el).children('.dropdown').addClass('active')
+      console.log(1)
+    }, function()
+    {
+      $(el).children('.dropdown').removeClass('active')
+      console.log(2)
+    })
+  </script>
 </body>

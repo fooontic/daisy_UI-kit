@@ -6,6 +6,8 @@ head
 	link(href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,400italic&amp;subset=latin,cyrillic",rel="stylesheet",type="text/css")
 	link(href="css/style.min.css",rel="stylesheet")
 
+
+
 body
 
 	:verbatim
@@ -18,5 +20,19 @@ body
 
 
 
+	script(src="js/main.min.js")
 
-	
+	script.
+
+		var el = $('supheader__item');
+
+		$(el).hover(function(){
+			$(el).children('.dropdown').addClass('active')
+			console.log(1)
+			}, function(){
+			$(el).children('.dropdown').removeClass('active')
+			console.log(2)
+		})
+
+	//- :verbatim
+	//- include ./blocks/js.jade
