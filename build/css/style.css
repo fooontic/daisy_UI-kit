@@ -3850,3 +3850,75 @@ body
 
     opacity: 1;
 }
+.category-banner
+{
+    position: relative;
+
+    width: 100%;
+    height: 300px;
+
+    background-image: url(../img/category-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.category-banner__wrapper
+{
+    position: absolute;
+    top: 25px;
+    right: 0;
+
+    width: 320px;
+    margin-right: -15px;
+    padding: 20px 20px 30px;
+
+    color: #fff;
+    background-color: #2466bc;
+}
+.category-banner__wrapper:after
+{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 10px;
+
+    content: '';
+
+    background-color: rgba(255, 255, 255, .6);
+}
+.category-banner__title
+{
+    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2em;
+
+    margin: 0;
+    margin-bottom: 5px;
+
+    text-transform: uppercase;
+}
+.category-banner__adds
+{
+    font-size: 21px;
+
+    margin: 0;
+}
+.category-banner__flow-inner
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 70px;
+    padding: 12px 20px 30px;
+
+    background-color: rgba(255, 255, 255, .85);
+}
+.category-banner__flow
+{
+    margin: 0;
+}
