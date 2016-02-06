@@ -37,7 +37,7 @@
 	}
 
 	&__list {
-		padding: 0 30px 0 24px;
+		padding: 0 0 0 24px;
 		list-style: none;
 		font-size: @text-size--sm;
 		color: @main-color;
@@ -50,19 +50,7 @@
 		opacity: 0;
 		top: -15px;
 
-		&:before {
-			content: '';
-			position: absolute;
-			display: block;
-			z-index: 10;
-			width: 18px;
-			height: 12px;
-			top: 10px;			
-			left: -23px;
-			background-image: url(../img/lang__icons.png);
-			background-size: cover;
-		}
-
+		
 		&:after {
 			content: '';
 			position: absolute;
@@ -81,13 +69,94 @@
 
 	}
 
-	&--lang &__list-item {
 
-		&:after {
+	// Language dropdown 
+
+	&--lang &__list {
+		
+		padding: 0 30px 0 24px;
+
+		&-item { }
+
+		&-item:after {
 			width: 168px;
 			left: -40px;
 		}
+
+		&-item:before {
+			content: '';
+			position: absolute;
+			display: block;
+			z-index: 10;
+			width: 18px;
+			height: 12px;
+			top: 10px;			
+			left: -23px;
+			background-image: url(../img/supheader__sprite.png);
+			background-size: auto 27px;
+		}
+
+		&-item--lv:before {
+			background-position: -18px 0;
+		}
+		&-item--lt:before {
+			background-position: -36px 0;
+		}
+		&-item--pl:before {
+			background-position: 36px 0;
+		}
+		&-item--ru:before {
+			background-position: 18px 0;
+		}
 	}
+
+	// Language dropdown 
+
+	&--curr &__list {
+
+		&-item{
+			width: 150px;
+		}
+
+		&-item:after {
+			width: 206px;
+			left: -40px;
+		}
+
+		&-item:before {
+			content: '';
+			position: absolute;
+			display: block;
+			z-index: 10;
+			width: 14px;
+			height: 15px;
+			top: 8px;			
+			left: -23px;
+			background-image: url(../img/supheader__sprite.png);
+			background-size: auto 27px;
+		}
+
+		&-item--euro:before {
+			background-position: 0 -12px;
+		}
+		&-item--dollar:before {
+			background-position: -14px -12px;
+		}
+		&-item--zloty:before {
+			background-position: -28px -12px;
+		}
+		&-item--rubl:before {
+			background-position: -42px -12px;
+		}
+
+	}
+
+	// Currancy dropdown 
+
+	
+
+	// Currancy dropdown 
+
 
 	&__list-item span {
 		margin-right: 10px;
@@ -99,6 +168,29 @@
 
 
 .supheader__item--lang:hover .dropdown {
+	// display: block;
+	visibility: visible;
+	transform: scaleY(1);
+	opacity: 1;
+	transition: all 0.2s;
+
+	&__list-item {
+		
+		opacity: 1;
+		top: 0;
+		transition: opacity 0.3s, top 0.5s;
+
+		
+	}
+
+	
+
+
+
+
+}
+
+.supheader__item--curr:hover .dropdown {
 	// display: block;
 	visibility: visible;
 	transform: scaleY(1);

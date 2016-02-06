@@ -3545,7 +3545,6 @@ body
 .supheader__list
 {
     margin: 0;
-    padding: 3px 0 4px;
 }
 .supheader__item
 {
@@ -3554,7 +3553,7 @@ body
     display: inline-block;
 
     margin: 0 25px 0 0;
-    padding: 0 20px 0 0;
+    padding: 3px 20px 4px 0;
 
     vertical-align: top;
 }
@@ -3586,19 +3585,19 @@ body
 .supheader__item--curr:before
 {
     position: absolute;
-    top: 3px;
+    top: 7px;
     left: 0;
 
     display: block;
 
-    width: 17px;
-    height: 17px;
+    width: 14px;
+    height: 15px;
 
     content: '';
 
-    background-image: url(../img/supheader__icons.png);
-    background-position: 0 0;
-    background-size: cover;
+    background-image: url(../img/supheader__sprite.png);
+    background-position: -42px -12px;
+    background-size: auto 27px;
 }
 .supheader__item--lang
 {
@@ -3607,19 +3606,19 @@ body
 .supheader__item--lang:before
 {
     position: absolute;
-    top: 3px;
+    top: 8px;
     left: 0;
 
     display: block;
 
-    width: 19px;
-    height: 17px;
+    width: 18px;
+    height: 12px;
 
     content: '';
 
-    background-image: url(../img/supheader__icons.png);
-    background-position: -17px 0;
-    background-size: cover;
+    background-image: url(../img/supheader__sprite.png);
+    background-position: 18px 0;
+    background-size: auto 27px;
 }
 .container-fluid
 {
@@ -3683,7 +3682,7 @@ body
 {
     font-size: 14px;
 
-    padding: 0 30px 0 24px;
+    padding: 0 0 0 24px;
 
     list-style: none;
 
@@ -3698,23 +3697,6 @@ body
     padding: 5px 0;
 
     opacity: 0;
-}
-.dropdown__list-item:before
-{
-    position: absolute;
-    z-index: 10;
-    top: 10px;
-    left: -23px;
-
-    display: block;
-
-    width: 18px;
-    height: 12px;
-
-    content: '';
-
-    background-image: url(../img/lang__icons.png);
-    background-size: cover;
 }
 .dropdown__list-item:after
 {
@@ -3736,11 +3718,91 @@ body
 {
     display: block;
 }
+.dropdown--lang .dropdown__list
+{
+    padding: 0 30px 0 24px;
+}
 .dropdown--lang .dropdown__list-item:after
 {
     left: -40px;
 
     width: 168px;
+}
+.dropdown--lang .dropdown__list-item:before
+{
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    left: -23px;
+
+    display: block;
+
+    width: 18px;
+    height: 12px;
+
+    content: '';
+
+    background-image: url(../img/supheader__sprite.png);
+    background-size: auto 27px;
+}
+.dropdown--lang .dropdown__list-item--lv:before
+{
+    background-position: -18px 0;
+}
+.dropdown--lang .dropdown__list-item--lt:before
+{
+    background-position: -36px 0;
+}
+.dropdown--lang .dropdown__list-item--pl:before
+{
+    background-position: 36px 0;
+}
+.dropdown--lang .dropdown__list-item--ru:before
+{
+    background-position: 18px 0;
+}
+.dropdown--curr .dropdown__list-item
+{
+    width: 150px;
+}
+.dropdown--curr .dropdown__list-item:after
+{
+    left: -40px;
+
+    width: 206px;
+}
+.dropdown--curr .dropdown__list-item:before
+{
+    position: absolute;
+    z-index: 10;
+    top: 8px;
+    left: -23px;
+
+    display: block;
+
+    width: 14px;
+    height: 15px;
+
+    content: '';
+
+    background-image: url(../img/supheader__sprite.png);
+    background-size: auto 27px;
+}
+.dropdown--curr .dropdown__list-item--euro:before
+{
+    background-position: 0 -12px;
+}
+.dropdown--curr .dropdown__list-item--dollar:before
+{
+    background-position: -14px -12px;
+}
+.dropdown--curr .dropdown__list-item--zloty:before
+{
+    background-position: -28px -12px;
+}
+.dropdown--curr .dropdown__list-item--rubl:before
+{
+    background-position: -42px -12px;
 }
 .dropdown__list-item span
 {
@@ -3760,6 +3822,26 @@ body
     opacity: 1;
 }
 .supheader__item--lang:hover .dropdown__list-item
+{
+    top: 0;
+
+    -webkit-transition: opacity .3s, top .5s;
+            transition: opacity .3s, top .5s;
+
+    opacity: 1;
+}
+.supheader__item--curr:hover .dropdown
+{
+    visibility: visible;
+
+    -webkit-transition: all .2s;
+            transition: all .2s;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+
+    opacity: 1;
+}
+.supheader__item--curr:hover .dropdown__list-item
 {
     top: 0;
 

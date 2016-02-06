@@ -4,26 +4,36 @@
 			.supheader__wrapper
 				ul.supheader__list.pull-right
 					li.supheader__item.supheader__item--geo Россия, Санкт-Петербург
+						
 					li.supheader__item.supheader__item--curr Рубли
+						.dropdown.dropdown--curr
+							span.dropdown__title Валюта
+
+							ul.dropdown__list
+
+								li.dropdown__list-item.dropdown__list-item--euro Евро
+								li.dropdown__list-item.dropdown__list-item--dollar Доллар США
+								li.dropdown__list-item.dropdown__list-item--zloty Польский злотый
+								li.dropdown__list-item.dropdown__list-item--rubl Российский рубль
 					li.supheader__item.supheader__item--lang RU
 						.dropdown.dropdown--lang
 							span.dropdown__title Язык
 
-							ul.dropdown__list				
+							ul.dropdown__list
 
-								li.dropdown__list-item
+								li.dropdown__list-item.dropdown__list-item--en
 									span EN
 									| English
-								li.dropdown__list-item
+								li.dropdown__list-item.dropdown__list-item--lv
 									span LV
 									| Lietuvių
-								li.dropdown__list-item
+								li.dropdown__list-item.dropdown__list-item--lt
 									span LT
 									| Latviski
-								li.dropdown__list-item
+								li.dropdown__list-item.dropdown__list-item--pl
 									span PL
 									| Polski
-								li.dropdown__list-item
+								li.dropdown__list-item.dropdown__list-item--ru
 									span RU
 									| Русский
 								
