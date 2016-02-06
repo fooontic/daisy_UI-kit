@@ -63,6 +63,81 @@
   </header><br/><br/><br/>
   <div class="container-fluid">
     <div class="row">
+      <div class="col-xs-5">
+        <h3 class="h2">Акции и предложения</h3>
+        <div class="product-banner">
+          <div class="product-banner__img-inner"><img src="img/product-banner.jpg" class="product-banner__img" /></div>
+          <div class="product-banner__wrapper">
+            <h4 class="product-banner__title"> <a>Прыжки с парашютом</a></h4>
+            <div class="product-banner__flow">
+              <p class="product-banner__flow-name">Батутный центр Skylife</p>
+              <p class="product-banner__flow-location">Россия, Санкт-Петербург</p>
+            </div>
+            <div class="product-banner__rating"> </div>
+            <div class="product-banner__fav"></div>
+          </div>
+        </div>
+        <div class="product-banner">
+          <div class="product-banner__img-inner"><img src="img/product-banner.jpg" class="product-banner__img" /></div>
+          <div class="product-banner__wrapper">
+            <h4 class="product-banner__title"> <a>Прыжки с парашютом</a></h4>
+            <div class="product-banner__flow">
+              <p class="product-banner__flow-name">Батутный центр Skylife</p>
+              <p class="product-banner__flow-location">Россия, Санкт-Петербург</p>
+            </div>
+            <div class="product-banner__rating"> </div>
+            <div class="product-banner__fav"></div>
+          </div>
+        </div>
+        <div class="product-banner">
+          <div class="product-banner__img-inner"><img src="img/product-banner.jpg" class="product-banner__img" /></div>
+          <div class="product-banner__wrapper">
+            <h4 class="product-banner__title"> <a>Прыжки с парашютом</a></h4>
+            <div class="product-banner__flow">
+              <p class="product-banner__flow-name">Батутный центр Skylife</p>
+              <p class="product-banner__flow-location">Россия, Санкт-Петербург</p>
+            </div>
+            <div class="product-banner__rating"> </div>
+            <div class="product-banner__fav"></div>
+          </div>
+        </div>
+        <div class="product-banner">
+          <div class="product-banner__img-inner"><img src="img/product-banner.jpg" class="product-banner__img" /></div>
+          <div class="product-banner__wrapper">
+            <h4 class="product-banner__title"> <a>Прыжки с парашютом</a></h4>
+            <div class="product-banner__flow">
+              <p class="product-banner__flow-name">Батутный центр Skylife</p>
+              <p class="product-banner__flow-location">Россия, Санкт-Петербург</p>
+            </div>
+            <div class="product-banner__rating"> </div>
+            <div class="product-banner__fav"></div>
+          </div>
+        </div>
+        <div class="product-banner">
+          <div class="product-banner__img-inner"><img src="img/product-banner.jpg" class="product-banner__img" /></div>
+          <div class="product-banner__wrapper">
+            <h4 class="product-banner__title"> <a>Прыжки с парашютом</a></h4>
+            <div class="product-banner__flow">
+              <p class="product-banner__flow-name">Батутный центр Skylife</p>
+              <p class="product-banner__flow-location">Россия, Санкт-Петербург</p>
+            </div>
+            <div class="product-banner__rating"> </div>
+            <div class="product-banner__fav"></div>
+          </div>
+        </div>
+        <div class="product-banner">
+          <div class="product-banner__img-inner"><img src="img/product-banner.jpg" class="product-banner__img" /></div>
+          <div class="product-banner__wrapper">
+            <h4 class="product-banner__title"> <a>Прыжки с парашютом</a></h4>
+            <div class="product-banner__flow">
+              <p class="product-banner__flow-name">Батутный центр Skylife</p>
+              <p class="product-banner__flow-location">Россия, Санкт-Петербург</p>
+            </div>
+            <div class="product-banner__rating"> </div>
+            <div class="product-banner__fav"></div>
+          </div>
+        </div>
+      </div>
       <div class="col-xs-7">
         <h3 class="h2">В вашем регионе</h3>
         <div class="category-banner">
@@ -95,17 +170,47 @@
       </div>
     </div>
   </div>
+  <div class="somit--blue">
+    <div class="container-fluid">
+      <h3 class="h2 white">Виды спорта</h3>
+      <div class="categories">
+        <div class="categories__item-inner">
+          <div class="categories__item">
+            <h3 class="categories__item-name">Горные лыжи</h3> </div>
+        </div>
+        <div class="categories__item-inner">
+          <div class="categories__item">
+            <h3 class="categories__item-name">Сноуборд</h3> </div>
+        </div>
+        <div class="categories__item-inner">
+          <div class="categories__item">
+            <h3 class="categories__item-name">BMX</h3> </div>
+        </div>
+        <div class="categories__item-inner">
+          <div class="categories__item">
+            <h3 class="categories__item-name">Дельтаплан</h3> </div>
+        </div>
+      </div><a class="btn btn--white">Все виды спорта</a> </div>
+  </div>
   <script src="js/main.min.js"></script>
   <script>
-    var el = $('supheader__item');
+    var el = '.product-banner__img',
+      el2 = '.product-banner__title';
     $(el).hover(function()
     {
-      $(el).children('.dropdown').addClass('active')
+      $(this).parents('.product-banner').addClass('product-banner--hover')
       console.log(1)
     }, function()
     {
-      $(el).children('.dropdown').removeClass('active')
-      console.log(2)
+      $(this).parents('.product-banner').removeClass('product-banner--hover')
+    })
+    $(el2).hover(function()
+    {
+      $(this).parents('.product-banner').addClass('product-banner--hover')
+      console.log(1)
+    }, function()
+    {
+      $(this).parents('.product-banner').removeClass('product-banner--hover')
     })
   </script>
 </body>

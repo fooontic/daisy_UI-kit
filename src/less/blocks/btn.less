@@ -1,4 +1,30 @@
 .btn {
-	background-color: @add-color;
-	
+	// background-color: @add-color;
+	display: inline-block;
+	text-align: center;
+	padding: 16px 40px;
+	text-transform: uppercase;
+	border-radius: 3px;
+	text-decoration: none;
+	font-size: 24px;
+	font-family: @font-cond;
+	letter-spacing: 3px;
+	transition: .4s;
+
+	&:hover {
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&--white {
+		color: #fff;
+		border: 2px solid #fff;
+
+		&:hover {
+			color: #fff;
+			// border-color: @add-color;
+			background-color: @add-color;
+			transition: .15s;
+		}
+	}
 }

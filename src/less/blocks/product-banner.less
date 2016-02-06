@@ -1,0 +1,171 @@
+.product-banner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 7px;
+	position: relative;
+	z-index: 0;
+
+	&:nth-child(2n) {
+		background-color: @white-gray;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		// opacity: 0;
+		visibility: hidden;
+		border: 2px solid transparent;
+		transition: border 0.4s;
+	}
+
+	&--hover {
+		&:after {
+			// opacity: 1;
+			visibility: visible;
+			cursor: pointer;
+			border: 2px solid @add-color;
+			transition: border 0.1s;
+		}
+	}
+	
+	&__img-inner {
+		width: 135px;
+		height: 135px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__img {
+		display: block;
+		position: absolute;
+		max-height: 100%;
+		width: auto;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+	}
+
+	&__wrapper {
+		margin-left: 15px;
+	}
+
+	&__title {
+		margin: 5px 0;
+		font-size: @text-size--h4;
+		font-weight: normal;
+		color: @main-color;
+		cursor: pointer;
+		position: relative;
+		z-index: 3;
+
+		&:hover a, &:focus a{
+			text-decoration: none;
+		}
+
+		&:hover a{
+			color: @add-color;
+			cursor: pointer;
+		}
+	}
+
+	&__flow p { 
+		margin: 0;
+		color: @text-gray;
+		line-height: 1.5em;
+	}
+
+	&__flow {}
+
+
+
+
+	//////// rating 
+
+	&__rating {
+
+		position: absolute;
+		z-index: 1;
+		bottom: 15px;
+		display: block;
+		background-color: #333;
+		height: 17px;
+		width: 113px;
+		max-width: 112px;
+
+		&:before {
+			position: absolute;
+			content: '';
+			z-index: -1;
+			width: 70%;
+			height: 100%;
+			display: block;
+			background-color: #fbb03b;
+			left: 0;
+			top: 0;
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			bottom: -1px;
+			width: 115px;
+			height: 19px;
+			background-image: url(../img/rating_star.png);
+			background-repeat: repeat-x;
+			background-size: 23px auto;
+			background-position: 0 0;
+		}
+	}
+
+	&:nth-child(2n) &__rating:after {
+		background-position: 0 -19px;
+	}
+
+	&:nth-child(2n) &__rating:before {
+		width: 92%;
+	}
+
+	&:nth-child(3n) &__rating:before {
+		width: 60%;
+	}
+
+
+
+	////// fav-icon
+
+	&__fav {
+		box-sizing: content-box;
+		position: absolute;
+		bottom: 12px;
+		right: 15px;
+		height: 20px;
+		width: 24px;
+		opacity: .5;
+		background-image: url(../img/fav_icon.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0 0;
+		transition: opacity 0.4s;
+
+		&:hover {
+			opacity: 1;
+			cursor: pointer;
+			transition: opacity 0.2s;
+		}
+
+		&:active, &:visited, &:focus {
+			background-position: -24px 0;
+			opacity: 1;
+		}
+	}
+
+}
+

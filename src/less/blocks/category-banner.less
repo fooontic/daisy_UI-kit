@@ -8,17 +8,36 @@
 	background-repeat: no-repeat;
 	position: relative;
 
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		visibility: hidden;
+		background-color: rgba(255,255,255,0);
+		border: 0 solid @add-color;
+		transition: all 0.1s;
+	}
+
+
 
 	&__wrapper {
 		background-color: @main-color;
 		position: absolute;
 		right: 0;
+		z-index: 5;
 		top: 25px;
 		margin-right: -15px;
 		width: 320px;
 		// height: 120px;
 		padding: 20px 20px 30px;		
 		color: #fff;
+		transition: all 0.4s;
 
 		&:after {
 			content: '';
@@ -32,6 +51,22 @@
 		}
 
 	}
+
+	&:hover:after{
+		visibility: visible;
+		cursor: pointer;
+		border: 3px solid @add-color;
+		background-color: rgba(255,255,255,.3);	
+		transition: all 0.1s;
+	}
+
+	&:hover &__wrapper {
+		cursor: pointer;
+		background-color: @add-color;
+		transition: all 0.15s;
+	}
+	
+
 
 	&__title {
 		margin: 0;

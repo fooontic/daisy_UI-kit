@@ -23,10 +23,22 @@ body
 	
 	.container-fluid
 		.row
+
+			.col-xs-5
+				h3.h2 Акции и предложения
+				:verbatim
+				include ./blocks/product-banner.jade
+
 			.col-xs-7
 				h3.h2 В вашем регионе
 				:verbatim
 				include ./blocks/category-banner.jade
+
+	.somit--blue
+		.container-fluid
+			h3.h2.white Виды спорта
+			:verbatim
+			include ./blocks/categories.jade
 
 
 	//- :verbatim
@@ -38,16 +50,26 @@ body
 	script(src="js/main.min.js")
 
 	script.
-
-		var el = $('supheader__item');
+		var el = '.product-banner__img',
+			el2 ='.product-banner__title';
 
 		$(el).hover(function(){
-			$(el).children('.dropdown').addClass('active')
+			$(this).parents('.product-banner').addClass('product-banner--hover')
 			console.log(1)
 			}, function(){
-			$(el).children('.dropdown').removeClass('active')
-			console.log(2)
+			$(this).parents('.product-banner').removeClass('product-banner--hover')
 		})
+
+		$(el2).hover(function(){
+			$(this).parents('.product-banner').addClass('product-banner--hover')
+			console.log(1)
+			}, function(){
+			$(this).parents('.product-banner').removeClass('product-banner--hover')
+		})
+
+
+
+
 
 	//- :verbatim
 	//- include ./blocks/js.jade
