@@ -1,0 +1,65 @@
+.category-banner {
+
+	width: 100%;
+	height: 300px;
+	background-image: url(../img/category-banner.jpg)
+	;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+
+	&__wrapper {
+		background-color: @main-color;
+		position: absolute;
+		right: 0;
+		top: 25px;
+		margin-right: -15px;
+		width: 320px;
+		// height: 120px;
+		padding: 20px 20px 30px;		
+		color: #fff;
+
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 10px;
+			bottom: -10px;
+			left: 0;
+			background-color: rgba(255,255,255,.6);
+		}
+
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 5px;
+		font-family: @font-cond;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 42px;
+		line-height: 1.2em;
+
+	}
+
+	&__adds {
+		font-size: @text-size--h3;
+		margin: 0;
+	}
+
+	&__flow-inner {
+		position: absolute;
+		bottom: 0;
+		height: 70px;
+		width: 100%;
+		padding: 12px 20px 30px;
+		background-color: rgba(255,255,255,.85);
+	}
+
+	&__flow {
+		margin: 0;
+	}
+
+}
