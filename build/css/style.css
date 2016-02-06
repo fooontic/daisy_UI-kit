@@ -3679,6 +3679,13 @@ body
     color: #fff;
     background-color: #ea544e;
 }
+.btn--white:active
+{
+    -webkit-transition: .2s;
+            transition: .2s;
+    -webkit-transform: scale(.95, .95);
+            transform: scale(.95, .95);
+}
 .dropdown
 {
     position: absolute;
