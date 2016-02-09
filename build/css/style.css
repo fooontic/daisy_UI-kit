@@ -3573,6 +3573,8 @@ a:focus
 .supheader__list
 {
     margin: 0;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .supheader__item
 {
@@ -3584,6 +3586,10 @@ a:focus
     padding: 3px 20px 4px 0;
 
     vertical-align: top;
+}
+.supheader__item:last-child
+{
+    margin-right: 0;
 }
 .supheader__item:after
 {
@@ -3995,7 +4001,7 @@ a:focus
             transition: all .1s;
 
     border: 3px solid #0a366f;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(255, 255, 255, .2);
 }
 .category-banner:hover .category-banner__wrapper
 {
@@ -4077,20 +4083,6 @@ a:focus
 
     border: 2px solid transparent;
 }
-.product-banner:hover:after
-{
-    visibility: visible;
-
-    cursor: pointer;
-    -webkit-transition: border .1s;
-            transition: border .1s;
-
-    border: 2px solid #0a366f;
-}
-.product-banner:hover .product-banner__title a
-{
-    color: #0a366f;
-}
 .product-banner__img-inner
 {
     position: relative;
@@ -4141,6 +4133,20 @@ a:focus
 {
     cursor: pointer;
 
+    color: #0a366f;
+}
+.product-banner:hover:after
+{
+    visibility: visible;
+
+    cursor: pointer;
+    -webkit-transition: border .1s;
+            transition: border .1s;
+
+    border: 2px solid #0a366f;
+}
+.product-banner:hover .product-banner__title a
+{
     color: #0a366f;
 }
 .product-banner__flow p
@@ -4211,6 +4217,7 @@ a:focus
 .product-banner__fav
 {
     position: absolute;
+    z-index: 3;
     right: 15px;
     bottom: 12px;
 
