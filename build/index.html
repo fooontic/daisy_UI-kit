@@ -64,7 +64,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-5">
-        <h3 class="h2">Акции и предложения</h3>
+        <h3 class="h2"> <a href="#">Акции и предложения</a></h3>
         <div class="product-banner">
           <div class="product-banner__img-inner"><img src="img/product-banner.jpg" class="product-banner__img" /></div>
           <div class="product-banner__wrapper">
@@ -139,7 +139,7 @@
         </div>
       </div>
       <div class="col-xs-7">
-        <h3 class="h2">В вашем регионе</h3>
+        <h3 class="h2"> <a href="#">В вашем регионе</a></h3>
         <div class="category-banner">
           <div class="category-banner__wrapper">
             <h2 class="category-banner__title">Аэротруба</h2>
@@ -193,24 +193,4 @@
       </div><a class="btn btn--white">Все виды спорта</a> </div>
   </div>
   <script src="js/main.min.js"></script>
-  <script>
-    var el = '.product-banner__img',
-      el2 = '.product-banner__title';
-    $(el).hover(function()
-    {
-      $(this).parents('.product-banner').addClass('product-banner--hover')
-      console.log(1)
-    }, function()
-    {
-      $(this).parents('.product-banner').removeClass('product-banner--hover')
-    })
-    $(el2).hover(function()
-    {
-      $(this).parents('.product-banner').addClass('product-banner--hover')
-      console.log(1)
-    }, function()
-    {
-      $(this).parents('.product-banner').removeClass('product-banner--hover')
-    })
-  </script>
 </body>
